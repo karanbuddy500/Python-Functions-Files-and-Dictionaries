@@ -45,12 +45,13 @@ for i in lines:
 
 # Challenge: Create a list called emotions that contains the first word of every line in emotion_words.txt.
 
+fileref = open ("emotion_words.txt","r")
+line = fileref.readlines()
 emotions = []
-with open ("emotion_words.txt","r") as obj:
-    
-    for i in lines:
-        a = i.split()
-        emotions.append(a[0])  
+for words in line:
+    word = words.split()
+    emotions.append(word[0])
+print (emotions)
         
         
         
